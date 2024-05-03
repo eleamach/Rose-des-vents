@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Rose des vents</title>
+    <link rel="icon" type="image/x-icon" href="../images/RoseDesVents.png" />
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="../js/text.js" defer></script>
+</head>
+
+<!--Ici le body-->
+<body onload="displayTemperatures()">
+    <!--On importe le header-->
+    <div id="header"></div> 
+    <main>
+        <h2>Nos destinations :</h2>
+        <!--On réalise une grille afin de représenter toutes nos destinations-->
+        <button onclick="filtrerAnimaux()" class="Indexbutton"> Filtrer : accepte les animaux </button> 
+        <button onclick="filtrerEurope()" class="Indexbutton"> Filtrer : Europe </button> 
+        <button onclick="reinitialiser()" class="Indexbutton"> Réinitialiser</button>
+        <div class="grid-container" id="mainGrid">
+            <!--On créé un template afin que les destinations soient chargé automatiquement en fonction de leurs nombres afin de ne pas les rajouter manuellement-->
+            <template id="dest">
+                <div class="test">
+                    <article class="location-listing">
+                        <!--Ici on vient modifier l'url de la page de destination au clic sur la destination afin de rajouter un paramètre. Ce paramètre permettera d'afficher 
+                        la photo correspondante au voyage choisi sur la page d'apres (ainsi que le petit paragraphe explicatif)-->
+                        <a class="location-title" href="reservation.html?id={{ID}}">{{NOM}}</a>
+                        <div class="location-image">
+                            <!--On importe une photo de la destination-->
+                            <a><img class="accueilImages" src="{{IMAGES}}" alt="{{NOM}}">  </a>
+                        </div>
+                    </article>
+                </div>
+            </template>
+        </div>
+        <!--Ici, on a la partie météo qui affiche en temps réél les météos des capitales de nos destinations-->
+        
+        <h3>Meteo en temps réel :</h3>
+        <div id="cities-container"></div>
+        <template id="city-template">
+            <div class="city">
+                <h4 class="city-name"></h4>
+                <p class="city-temperature"></p>
+            </div>
+        </template>
+    </main>
+    <!--On importe le footer-->
+    <div id="footer"></div>
+</body>

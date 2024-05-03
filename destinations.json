@@ -1,0 +1,71 @@
+[{ 
+    "id":1,
+    "nom":"Cameroun", 
+    "description":"Le Cameroun, appelé officiellement République du Cameroun, est un pays d'Afrique centrale. Sa capitale politique est Yaoundé, au centre du pays, mais la ville principale est Douala, port maritime par où passe l'essentiel des échanges internationaux.", 
+    "prix":1000,
+    "images":"../images/cameroun.png",
+    "animaux":true, 
+    "europe":false,
+    "name": "Yaounde",
+    "url": "https://api.openweathermap.org/data/2.5/weather?q=yaounde&units=metric&appid=ab8b8900ec6b3432e2ccc1c7bd0437a2"
+},
+
+{ 
+    "id":2, 
+    "nom":"Tahiti", 
+    "description":"Tahiti est une île de la Polynésie française (collectivité d'outre-mer) située dans le Sud de l'océan Pacifique. Elle fait partie du groupe des îles du Vent et de l'archipel de la Société. Cette île haute et montagneuse, d'origine volcanique, est entourée d'un récif de corail.", 
+    "prix":2000,
+    "images":"../images/tahiti.png",
+    "animaux":false, 
+    "europe":false,
+    "name": "Papeete",
+    "url": "https://api.openweathermap.org/data/2.5/weather?q=papeete&units=metric&appid=ab8b8900ec6b3432e2ccc1c7bd0437a2"
+},
+  
+{ 
+    "id":3, 
+    "nom":"Grece", 
+    "description":"La Grèce s'ouvre sur la mer Méditerranée ; c'est un pays qui possède plus de 6 000 petites îles. La plus grande île de Grèce est la Crète. Depuis la plus haute Antiquité, la Grèce a toujours eu une étroite relation avec la mer.", 
+    "prix":3000,
+    "images":"../images/grece.png",
+    "animaux":true, 
+    "europe":true,
+    "name": "Athenes",
+    "url": "https://api.openweathermap.org/data/2.5/weather?q=athens&units=metric&appid=ab8b8900ec6b3432e2ccc1c7bd0437a2" 
+},
+ 
+{ 
+    "id":4, 
+    "nom":"Espagne", 
+    "description":"L'Espagne (en espagnol : España), officiellement nommée le royaume d'Espagne (en espagnol : Reino de España), est un pays d'europee de l'Ouest continentale. Elle occupe 85% de la péninsule Ibérique qu'elle partage avec le Portugal. Elle est séparée de la France par les Pyrénées. Avec une superficie de 505 992 km², l'Espagne est un peu moins étendue que son pays voisin, la France. ", 
+    "prix":4000,
+    "images":"../images/espagne.png",
+    "animaux":true, 
+    "europe":true,
+    "name": "Madrid",
+    "url": "https://api.openweathermap.org/data/2.5/weather?q=madrid&units=metric&appid=ab8b8900ec6b3432e2ccc1c7bd0437a2" 
+} ,
+  
+{ 
+    "id":5, 
+    "nom":"Corse", 
+    "description":"La Corse (Corsica en corse, Còrsega en ligurien) est une île de la mer Méditerranée, au large du sud-est de la France, à l'ouest de l'Italie et au nord de la Sardaigne (dont elle n'est séparée que par un détroit large d'une douzaine de kilomètres : les Bouches de Bonifacio). Sa splendeur naturelle lui vaut l'appellation bien connue d'île de beauté. Ses habitants sont les Corses. ", 
+    "prix":5000,
+    "images":"../images/corse.png",
+    "animaux":false, 
+    "europe":true,
+    "name": "Ajaccio",
+    "url":"https://api.openweathermap.org/data/2.5/weather?q=ajaccio&units=metric&appid=ab8b8900ec6b3432e2ccc1c7bd0437a2"
+} ,
+
+{ 
+    "id":6, 
+    "nom":"Martinique", 
+    "description":"La Martinique est une île française située dans les Petites Antilles. Surnomée l'île aux fleurs, cette île découverte en 1502 par Christophe Colomb est connue pour son climat tropical mais aussi pour son agriculture qui est tournée vers la production de la canne à sucre et des bananes.", 
+    "prix":6000,
+    "images":"../images/martinique.png",
+    "animaux":true, 
+    "europe":false,
+    "name": "Fort-de-France",
+    "url": "https://api.openweathermap.org/data/2.5/weather?q=fort-de-france&units=metric&appid=ab8b8900ec6b3432e2ccc1c7bd0437a2"
+}]

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr"></html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation - Rose des vents</title>
+    <link rel="icon" type="image/x-icon" href="../images/RoseDesVents.png" />
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="../js/text.js" defer></script>
+</head>
+
+<!--Ici le body-->
+<body>
+    <!--Importe le header-->
+    <div id="header"></div> 
+    <main>
+        <h2>Reservation de votre voyage </h2>
+        <!--On vient afficher le prix total du voyage en fonction des dates choisies, du voyages lui-même, du nombre de voyageurs et des petits dejeuner-->
+        <p id="prix1"> Prix : </p>
+        <p id="prixTotal"> 0 </p>
+        <div id="container">
+            <div>
+                <!--Ici on créé un form pour remplir notre réservation, on a séparer ce forme en fielset pour mieux se repérer-->
+                <form action="basket.html">
+                    <!--On commence par le fieldset avec les informations du client-->
+                    <fieldset name="Voyage">
+                        <legend >Voyage</legend>
+                        <label for="depart">Date de départ* : </label>
+                        <input type="date" min="2023-02-10" name="depart" id="depart" required> <br>
+                        <label for="retour">Date de retour* : </label>
+                        <input type="date" min="2000-01-01" name="retour" id="retour" required> 
+                    </fieldset>
+                    <br>
+                    <!--Puis le fieldset avec toutes le sinformations relative au voyage-->
+                    <fieldset name="Informations du voyage">      
+                        <legend>Informations du voyage</legend>
+                        <label for="adultes">Nombre d'adultes* : </label>
+                        <input type="number" name="adultes" id="adultes" min="1" inputmode="numeric" required> <br>
+                        <label for="enfants">Nombre d'enfant* : </label>
+                        <input type="number" name="enfants" id="enfants"min="0" inputmode="numeric" required> <br> 
+                        <label for="dejeuner">Petit déjeuner ?  </label>
+                        <input class="dejeuner" type="checkbox" name="dejeuner" id="dejeuner"> 
+                    </fieldset>
+                    <br>
+                    <!--Ici c'est les boutons pour envoyer ou clear le formulaire-->
+                    <label for="clear"></label>
+                    <input type="reset" name="clear" id="clear"> <br>
+                    <label for="envoyer"></label>
+                    <button id="envoyer" onclick="envoyerEtSauvegarder()"> Envoyer </button> <br> 
+                </form>
+            </div>
+            <div>  
+                <!--Ici on affiche les informations du voyage choisi qui sont implémenté en fonction de l'index du paramètre de l'url envoyé à la page d'avant -->
+                <h2 id="nomVoyage"> vide </h2>
+                <br>
+                <p id="descriptionVoyage"> vide </p>
+            </div>
+        </div>
+    </main>
+    <!--Importe le footer-->
+    <div id="footer"></div>
+</body> 

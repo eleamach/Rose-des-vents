@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr"></html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - Rose des vents</title>
+    <link rel="icon" type="image/x-icon" href="../images/RoseDesVents.png" />
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="../js/text.js" defer></script>
+</head>
+
+<!--Ici le body-->
+<body>
+    <!--Ici on importe le header-->
+    <div id="header"></div> 
+    <main>
+        <h2>Panier</h2>
+        <table id="tableau">
+            <thead>
+                <tr>
+                    <!--Ici c'est la premoère ligne du tableau qui va afficher dans le panier les destinations reservé-->
+                    <th>Nom du voyage</th>
+                    <th>Départ</th>
+                    <th>Retour</th>
+                    <th>Adultes</th>
+                    <th>Enfants</th>
+                    <th>Déjeuner</th>
+                    <th>Prix total (€)</th>
+                    <th>Supprimer ?</th>
+                </tr>
+            </thead>
+        <tbody>
+            <!--Cette partie là va être implémenter avec les destinations contenu dans le stockage local-->
+        </tbody>
+    </table>
+    <p> Prix total : </p>
+    <p id="prixtotaldupanier"> 0€ </p>
+    <!--Un bouton pour supprimer TOUT les voyages d'un coup-->
+    <button onclick="supprimer()" class="buttonBasket"> Vider entierment le panier </button> <br>
+
+    <br><br><br><br><br>
+
+    <!--Viens ensuite le formulaire de confirmation pour valider les voyages-->
+    <h2> Formulaire de confirmation :</h2>
+    <div>
+        <!--Le formulaire :-->
+        <form action="confirmation.html">
+            <fieldset>
+                <!--Partie identité de la personne qui paie-->
+                <legend>Identité</legend>
+                <label for="prenom">Prénom* : </label>
+                <input type="text"name="prenom" class="basket" required> <br>
+                <label for="nom">Nom* : </label>
+                <input type="text" name="nom" class="basket" required> <br>
+                <label for="age">Age* : </label>
+                <input type="date" name="age" class="basket" required> <br>
+                <label for="email">Email* : </label>
+                <input type="text" name="email" class="basket" required> <br>
+                <label for="telephone">Téléphone* : </label>
+                <input type="text" name="telephone" class="basket" required>
+            </fieldset>
+            <br>
+            <fieldset>
+                <!--Partie coordonnées-->
+                <legend>Adresse</legend>
+                <label for="addr">Adresse postale* : </label>
+                <input type="text" name="addr" class="basket" required> <br>
+                <label for="codePst">Code postal* : </label>
+                <input type="text" name="codePst" class="basket" required> 
+            </fieldset>
+            <br>
+            <fieldset>
+                <!--Partie paiement-->
+                <legend>Paiement</legend>
+                <label for="bitcoin">En bitcoin ? </label>
+                <input type="checkbox" name="bitcoin"> <br>
+                <label for="nft">En nft ? </label>
+                <input type="checkbox" name="nft"> <br>
+            </fieldset>
+            <br>
+            <!--Bouton d'envoie du formulaire-->
+            <button href="confirmation.html" class="buttonBasket"> Envoyer </button>
+        </form>
+    </div>
+    <br><br><br><br><br>
+    <!--Ici, comme le header, on importe le footer-->
+    <div id="footer"></div>
+</main>
+</body> 
